@@ -79,3 +79,51 @@ Validation is performed by comparing simulation outcomes with known analytical a
   /_material_models_ – material law definitions (e.g. elastoplasticForceState.m) <br />
   /_results_ – simulation output (.mat) <br />
   /_solvers_ – main simulation drivers and core functions <br />
+
+---
+
+### Good Practice
+
+- **Structure template:** `<category>_<property>_<variant>.mat`
+- **Attributes:** Time step, configuration type, material model
+- **Codes/abbreviations:**  
+  - `init` – initial state  
+  - `def` – deformed state  
+  - `EP` – elastoplastic  
+  - `BB` – bond-based  
+  - `SB` – state-based  
+
+**Examples:**
+- `geometry_init_BB.mat`
+- `results_def_EP_SB.mat`
+- `stress_map_T5_BB.vtk`
+
+---
+
+## File formats
+
+- **Simulation data:** `.mat`, `.txt`, `.csv`
+- **Visualization:** `.vtk`, `.vts`, `.pvts`, `.jpeg`, `.tiff`, `.pdf`, `.bmp`
+- **Code:** `.m`
+- **Documentation:** `.tex`, `.pdf`
+
+---
+
+## Column headings for tabular data
+
+Not applicable – all variables are stored in structured `.mat` files.
+
+---
+
+## Versioning
+
+A changelog section should be maintained in this README file. Each modification of the model or solver will be recorded as follows:
+
+### Changelog
+
+- `v1.0` (2025-04): Initial implementation of elastoplastic Cosserat-based PD model.
+- `v1.1` (planned): Extension with thermal coupling and fatigue-related functionalities.
+
+---
+
+*Please remove the "Good Practice" hints and notes when finalizing this document.*
