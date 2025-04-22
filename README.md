@@ -69,16 +69,16 @@ Validation is performed by comparing simulation outcomes with known analytical a
 
 ## File name structure
 
-/_NOSBPD_Nosal_ <br />
-  /_boundary_conditions_ – input data for boundary definitions <br />
-  /_common_files_ – shared functions and scripts <br />
-  /_figures_ – exported figures (plots, animations, visuals) <br />
-  /_input_output_ <br />
-    /_undeformed_configuration_ – input geometry and settings <br />
-    /_deformed_configuration_ – results of deformation <br />
-  /_material_models_ – material law definitions (e.g. elastoplasticForceState.m) <br />
-  /_results_ – simulation output (.mat) <br />
-  /_solvers_ – main simulation drivers and core functions <br />
+- _NOSBPD_Nosal_ <br />
+  - _boundary_conditions_ – input data for boundary definitions <br />
+  - _common_files_ – shared functions and scripts <br />
+  - _figures_ – exported figures (plots, animations, visuals) <br />
+  - _input_output_ <br />
+    - _undeformed_configuration_ – input geometry and settings <br />
+    - _deformed_configuration_ – results of deformation <br />
+  - _material_models_ – material law definitions (e.g. elastoplasticForceState.m) <br />
+  - _results_ – simulation output (.mat) <br />
+  - _solvers_ – main simulation drivers and core functions <br />
 
 ---
 
