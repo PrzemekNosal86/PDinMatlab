@@ -1,4 +1,5 @@
 # PDinMatlab
+[![DOI](https://zenodo.org/badge/970575823.svg)](https://doi.org/10.5281/zenodo.15781181)
 
 # Title of dataset
 
