@@ -17,11 +17,12 @@ addpath('tools')
 % Affiliation     : AGH University of Krakow
 % Contact         : pnosal@agh.edu.pl
 % Subject         : Computational Mechanics, Peridynamics, Cosserat Theory, Elasto-plasticity
-% Description     : MATLAB implementation of a Cosserat-based peridynamic model. 
-%                   The simulation aims to validate the proposed Cosserat model 
-%                   by analyzing the response of a representative volume element (RVE) 
-%                   under quasi-static loading conditions. The model incorporates 
-%                   elasto-plastic behavior under small strain assumption.
+% Description     : MATLAB implementation of a non-ordinary state-based 
+%                   peridynamic (NOSB PD) model for simulating brittle fracture 
+%                   in a Shear Notch Specimen (SENS). The simulation focuses on 
+%                   damage initiation and crack propagation under quasi-static 
+%                   shear loading. Elasto-plasticity and Cosserat theory are 
+%                   not included in this version.
 % Publisher       : AGH University of Krakow
 % Contributor     : 
 % Date            : 2025-04-25
@@ -29,7 +30,7 @@ addpath('tools')
 % Format          : MATLAB .m code
 % Language        : en
 % Relation        : https://osf.io/, https://zenodo.org/
-% Coverage        : Simulated elastic-plastic material behavior under quasi-static loading
+% Coverage        : Simulated elastic material behavior under quasi-static loading
 % Rights          : CC BY 4.0 International
 % Software        : MATLAB R2024b
 % Version         : 1.0 – initial release
