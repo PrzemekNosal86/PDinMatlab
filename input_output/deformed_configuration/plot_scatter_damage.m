@@ -1,4 +1,19 @@
-% Plot the deformed configuration
+%% plotDeformedDamageField.m
+% Title          : Animated visualization of damage field in deformed configuration
+% Author         : Przemysław Nosal
+% ORCID          : 0000-0001-9751-0071
+% Affiliation    : AGH University of Krakow
+% Contact        : pnosal@agh.edu.pl
+% Date           : 2025-07-05
+% Version        : 1.0
+% Description    :
+%   Generates an animated scatter plot of the damage field (φ) in the 
+%   deformed configuration over time. Each frame displays the node-based
+%   damage value computed from bond breakage and the amplified deformation.
+%   The result is saved as an MPEG-4 video.
+% Dependencies   : GRID, Usteps, INIBOND, INI_TIME, dt, saving_interval, 
+%                  ntot_savings, ntot_steps, nnods
+% License        : CC-BY 4.0
 
 % Get the path to the folder where the script is located
 script_folder = fileparts(mfilename('fullpath'));

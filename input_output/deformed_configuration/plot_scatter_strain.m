@@ -1,4 +1,19 @@
-% Plot the deformed configuration with strain field
+%% plotDeformedStrainField.m
+% Title          : Animated visualization of strain field in deformed configuration
+% Author         : Przemysław Nosal
+% ORCID          : 0000-0001-9751-0071
+% Affiliation    : AGH University of Krakow
+% Contact        : pnosal@agh.edu.pl
+% Date           : 2025-07-05
+% Version        : 1.0
+% Description    :
+%   Creates an animated scatter plot of a selected strain component 
+%   (ε₁₁, ε₂₂ or ε₁₂) in the deformed configuration of the sample.
+%   Uses nodal displacements and strain field data from a quasi-static 
+%   Peridynamics simulation to plot color-coded values on the mesh.
+%   Saves the result as a video file in the "figures" directory.
+% Dependencies   : GRID, Usteps, StrainSteps, dt, nnods, ntot_savings, ntot_steps
+% License        : CC-BY 4.0
 
 % Get the path to the folder where the script is located
 script_folder = fileparts(mfilename('fullpath'));

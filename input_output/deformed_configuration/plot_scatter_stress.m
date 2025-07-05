@@ -1,4 +1,19 @@
-% Plot the deformed configuration with stress field
+%% plotDeformedStressField.m
+% Title          : Animated visualization of stress field in deformed configuration
+% Author         : Przemysław Nosal
+% ORCID          : 0000-0001-9751-0071
+% Affiliation    : AGH University of Krakow
+% Contact        : pnosal@agh.edu.pl
+% Date           : 2025-07-05
+% Version        : 1.0
+% Description    :
+%   Generates an animated scatter plot of a selected stress component 
+%   (σ₁₁, σ₂₂, or σ₁₂) over time in the deformed configuration of the specimen.
+%   Each frame shows the nodal grid colored by stress values and displaced
+%   according to amplified displacements from the simulation.
+%   Result is saved as an MPEG-4 video in the "figures" directory.
+% Dependencies   : GRID, Usteps, StressSteps, dt, nnods, ntot_savings, ntot_steps
+% License        : CC-BY 4.0
 
 % Get the path to the folder where the script is located
 script_folder = fileparts(mfilename('fullpath'));
