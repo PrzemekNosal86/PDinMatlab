@@ -27,3 +27,4 @@ function omega = influenceFunction(xi, delta)
 % -------------------------------------------------------------------------
 
 omega = exp(-((xi)^2 / delta^2));
+end

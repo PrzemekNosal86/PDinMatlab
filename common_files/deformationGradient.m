@@ -25,7 +25,6 @@ function F = deformationGradient(Xi, GRID, INIBOND, dV, delta, U_n, invK, INI_TI
 % dV        – scalar volume associated with each node (assumed uniform)
 % delta     – horizon value used in the influence function
 % U_n       – global displacement vector [3*N x 1] (N = number of nodes)
-% dx        – grid spacing (used for potential volume correction; unused here)
 % invK      – inverse shape tensor for each node [N x 9] (flattened 3×3)
 % INI_TIME  – matrix indicating time of bond failure (0 if bond is intact)
 %
@@ -80,4 +79,5 @@ for i = 1:rows
 
     % Store flattened deformation gradient
     F(i, :) = reshape(tempF, [], 1);
+end
 end

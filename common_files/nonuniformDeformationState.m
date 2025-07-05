@@ -1,5 +1,5 @@
 function z = nonuniformDeformationState(idx1, idx2, GRID, F, U_n)
-%% nonuniformDeformationState2.m
+%% nonuniformDeformationState.m
 % Title: Nonuniform deformation state calculator for NOSB peridynamics
 % Author: Przemysław Nosal
 % ORCID: 0000-0001-9751-0071
