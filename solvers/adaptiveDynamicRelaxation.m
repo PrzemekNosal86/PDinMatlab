@@ -13,16 +13,15 @@ function [U_next, velhalf, cn] = adaptiveDynamicRelaxation(U_n, velhalf, velhalf
 % License      : CC-BY 4.0
 %
 % INPUTS:
-%   disp         – displacement at current step [3*ntotnode x 1]
-%   vel          – full-step velocity [3*ntotnode x 1]
-%   velhalf      – half-step velocity [3*ntotnode x 1]
-%   velhalfold   – previous half-step velocity [3*ntotnode x 1]
-%   pforce       – internal force at current step [3*ntotnode x 1]
-%   pforceold    – internal force at previous step [3*ntotnode x 1]
-%   bforce       – body force vector [3*ntotnode x 1]
-%   massvec      – mass vector [3*ntotnode x 1]
-%   dt           – time step
-%   tt           – current step index (integer)
+%   U_n         – displacement at current step [3*ntotnode x 1]
+%   velhalf     – half-step velocity at previous step [3*ntotnode x 1]
+%   velhalfold  – memory of previous half-step velocity [3*ntotnode x 1]
+%   pforce      – internal force at current step [3*ntotnode x 1]
+%   pforceold   – internal force at previous step [3*ntotnode x 1]
+%   massvec     – lumped mass vector [3*ntotnode x 1]
+%   dt          – time step
+%   tt          – current time step (int)
+%   IdxUknown   – indices of constrained DOFs (Dirichlet boundary conditions)
 %
 % OUTPUTS:
 %   disp         – updated displacement
