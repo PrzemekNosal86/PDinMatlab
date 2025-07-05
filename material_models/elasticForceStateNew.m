@@ -28,12 +28,13 @@ function [L, post_stress, post_strain] = elasticForceStateNew(Xi, GRID, INIBOND,
 % invK        – inverse shape tensor matrix [N x 9]
 % I           – identity tensor (3x3)
 % T           – internal force vector [3*N x 1] (updated in-place)
+% L           – global internal force vector [3*N x 1]; updated in-place
 % dx          – grid spacing [mm]
 % U_n         – displacement vector [3*N x 1]
 % INI_TIME    – bond damage matrix (0 if intact, >0 if broken)
 %
 % OUTPUTS:
-% T           – updated internal force vector [3*N x 1]
+% L           – updated internal force vector [3*N x 1]
 % post_stress – stress vector for each node [3*N x 1]
 % post_strain – strain vector for each node [3*N x 1]
 % -------------------------------------------------------------------------
