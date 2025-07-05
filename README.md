@@ -1,6 +1,14 @@
 # PDinMatlab
 [![DOI](https://zenodo.org/badge/970575823.svg)](https://doi.org/10.5281/zenodo.15781181)
 
+> ---
+> **ℹ️ Note on Repository Scope and DOI**
+>
+> The Cosserat-based peridynamic model will be made publicly available after the associated research results are published.  
+> The current DOI points to the archived version hosted on [Zenodo](https://zenodo.org/).  
+> If you are interested in updates or collaboration, feel free to get in touch.
+> ---
+
 # Title of dataset
 
 Development of an elasto-plastic model based on Cosserat theory using the peridynamics method
@@ -31,7 +39,8 @@ This dataset contains MATLAB source code and simulation data related to the deve
 The data were generated using custom MATLAB code (`elastoplasticForceState.m`) implementing the Cosserat-based peridynamic model. The simulations include both undeformed and deformed configurations of the analyzed structures. The methodology is described in the associated research proposal and will be further detailed in future publications.
 
 - References:  
-  S.A. Silling, *Reformulation of elasticity theory for discontinuities and long-range forces*, JMPS, 2000  
+  S.A. Silling, *Reformulation of elasticity theory for discontinuities and long-range forces*, JMPS, 2000
+  P. Nosal, A. Ganczarski, *Modeling solid materials in DEM using the micropolar theory*, Adv. Struc. Mat., 2023
   S. Riad et al., *Effect of microstructural length scales on crack propagation in elastic Cosserat media*, EFM, 2022  
 
 ---
@@ -70,35 +79,34 @@ Validation is performed by comparing simulation outcomes with known analytical a
 
 ## File name structure
 
-- _NOSBPD_Nosal_ <br />
-  - _boundary_conditions_ – input data for boundary definitions <br />
-  - _common_files_ – shared functions and scripts <br />
-  - _figures_ – exported figures (plots, animations, visuals) <br />
-  - _input_output_ <br />
-    - _undeformed_configuration_ – input geometry and settings <br />
-    - _deformed_configuration_ – results of deformation <br />
-  - _material_models_ – material law definitions (e.g. elastoplasticForceState.m) <br />
-  - _results_ – simulation output (.mat) <br />
-  - _solvers_ – main simulation drivers and core functions <br />
-
----
-
-### Good Practice
-
-- **Structure template:** `<category>_<property>_<variant>.mat`
-- **Attributes:** Time step, configuration type, material model
-- **Codes/abbreviations:**  
-  - `init` – initial state  
-  - `def` – deformed state  
-  - `EP` – elastoplastic  
-  - `BB` – bond-based  
-  - `SB` – state-based  
-
-**Examples:**
-- `geometry_init_BB.mat`
-- `results_def_EP_SB.mat`
-- `stress_map_T5_BB.vtk`
-
+```
+/PDinMatlab/
+│
+├── README.md # Documentation file
+├── LICENSE # Licensing information
+├── NOSB_SENS_brittle_fracture_ADR.m # Main simulation script
+│
+├── /material_models/ # Material behavior definitions
+│ └── elasticForceStateNew.m
+│
+├── /solvers/ # Time integration solvers and mass matrix
+│ ├── adaptiveDynamicRelaxation.m
+│ └── ...
+│
+├── /common_files/ # Core peridynamic functions and utilities
+│ ├── applyInitialCrack.m
+│ └── ...
+│
+├── /input_output/
+│ ├── /deformed_configuration/ # Plotting and visualization of results
+│ │ ├── plot_scatter_damage.m
+│ │ └── ...
+│ └── ...
+│
+├── /boundary_conditions/ # Boundary condition assignment
+│ ├── findSpecialBoundaryNodes.m
+│ └── ...
+```
 ---
 
 ## File formats
@@ -109,6 +117,24 @@ Validation is performed by comparing simulation outcomes with known analytical a
 - **Documentation:** `.tex`, `.pdf`
 
 ---
+
+## File Naming Conventions
+
+Saved data files follow the naming scheme:
+
+`<base_name><description><date>verification<id>.mat`
+
+Where:
+- `<base_name>` – simulation model identifier (e.g. `NOSBPD_brittle_fracture_SENS_ADR`)
+- `<description>` – user-defined simulation label (e.g. `_test_`)
+- `<date>` – date of the simulation in `dd_MM_yyyy` format
+- `<id>` – parameter or variant number (e.g. 1)
+
+### Example:
+
+`NOSBPD_brittle_fracture_SENS_ADR_test_05_07_2025_verification_1.mat`
+
+This file stores results from a shear fracture simulation (SENS) using the NOSB peridynamics model, labeled as "test", performed on July 5, 2025, and identified as case 1.
 
 ## Column headings for tabular data
 
@@ -127,4 +153,6 @@ A changelog section should be maintained in this README file. Each modification 
 
 ---
 
-*Please remove the "Good Practice" hints and notes when finalizing this document.*
+## Acknowledgements
+
+The project is funded by the **MINIATURA 8** program of the **Polish National Science Centre (NCN)** under grant number **DEC-2024/08/X/ST8/00273**.  
