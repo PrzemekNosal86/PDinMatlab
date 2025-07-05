@@ -1,5 +1,5 @@
 # PDinMatlab
-[![DOI](https://zenodo.org/badge/970575823.svg)](https://doi.org/10.5281/zenodo.15781181)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15812076.svg)](https://doi.org/10.5281/zenodo.15812076)
 
 > ---
 > **ℹ️ Note on Repository Scope and DOI**
