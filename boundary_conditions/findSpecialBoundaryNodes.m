@@ -29,7 +29,6 @@ function nodeIDs = findSpecialBoundaryNodes(GRID, layerNodeIDs, lineCoords, refP
 %
 % LOCAL VARIABLES:
 % tangent, normal – normalized vectors of the line segment
-% distances       – distance arrays used to find closest nodes
 % lowerTarget     – coordinates shifted by -dx along normal
 % upperTarget     – coordinates shifted by +dx along normal
 % -------------------------------------------------------------------------
