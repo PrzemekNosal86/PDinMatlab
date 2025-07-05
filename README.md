@@ -39,8 +39,8 @@ This dataset contains MATLAB source code and simulation data related to the deve
 The data were generated using custom MATLAB code (`elastoplasticForceState.m`) implementing the Cosserat-based peridynamic model. The simulations include both undeformed and deformed configurations of the analyzed structures. The methodology is described in the associated research proposal and will be further detailed in future publications.
 
 - References:  
-  S.A. Silling, *Reformulation of elasticity theory for discontinuities and long-range forces*, JMPS, 2000
-  P. Nosal, A. Ganczarski, *Modeling solid materials in DEM using the micropolar theory*, Adv. Struc. Mat., 2023
+  S.A. Silling, *Reformulation of elasticity theory for discontinuities and long-range forces*, JMPS, 2000  
+  P. Nosal, A. Ganczarski, *Modeling solid materials in DEM using the micropolar theory*, Adv. Struc. Mat., 2023  
   S. Riad et al., *Effect of microstructural length scales on crack propagation in elastic Cosserat media*, EFM, 2022  
 
 ---
